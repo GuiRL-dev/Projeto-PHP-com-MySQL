@@ -4,9 +4,10 @@ $desc_categoria = $_POST['desc_categoria'];
 $sql = "INSERT INTO categorias (desc_categoria) VALUES ('$desc_categoria')";
 $inserir = mysqli_query($conexao, $sql);
 ?>
+
 <head>
   <style>
-    div{
+    div {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -17,5 +18,5 @@ $inserir = mysqli_query($conexao, $sql);
   <h4>Categoria Adicionada com Sucesso</h4>
 </div>
 <div>
-<a href="lista_categorias.php">Voltar</a>
+  <a href="lista_categorias.php">Voltar</a>
 </div>

@@ -10,6 +10,9 @@
 </head>
 
 <body>
+  <?php
+  include 'menu.php';
+  ?>
   <h4>Inclusão de Categorias</h4>
   <form action="_incluir_categorias.php" method="post">
     <label>Descrição</label>
