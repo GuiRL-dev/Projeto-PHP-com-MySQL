@@ -112,13 +112,13 @@
               ?>
           </td>
           <td>
-            <a href="editar_fornecedores.php?id_fornecedor=<?php echo $id_fornecedor ?>"class="btn btn-warning">Editar</a>
+            <a href="editar_fornecedores.php?id_fornecedor=<?php echo $id_fornecedor ?>"class="btn btn-danger">Editar</a>
         </td>
         </tr>
       <?php } ?>
     </tbody>
   </table>
-  <a href="incluir_fornecedores.php" class="btn btn-success">Inserir</a>
+  <a href="incluir_fornecedores.php" class="btn btn-danger">Inserir</a>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
