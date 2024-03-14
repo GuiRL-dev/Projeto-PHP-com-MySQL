@@ -27,15 +27,14 @@ $id_usuario = $_GET['id_usuario'];
       $email_usuario = $array['email_usuario'];
       $password = $array['password'];
       ?>
-      <Label for="id_usuario">ID</Label>
       <input type="hidden" name="id_usuario" value="<?php echo $id_usuario ?>">
-      <label for="nome_usuario">Nome do Usuário</label>
-      <input type="text" name="nome_usuario" value="<?php echo $nome_usuario ?>">
-      <label for="email_usuario">Email do Usuário</label>
-      <input type="email" name="email_usuario" value="<?php echo $email_usuario ?>">
-      <label for="password">Senha do Usuario</label>
-      <input type="password" name="password" value="<?php echo $password ?>">
-      <button type="submit" id="botao">Excluir</button>
+      <h5>Nome do Usuário</h5>
+      <p><?php echo $nome_usuario ?></p>
+      <h5>Email do Usuário</h5>
+      <p><?php echo $email_usuario ?></p>
+      <h5>Senha do Usuario</h5>
+      <p><?php echo $password ?></p>
+      <button class="btn btn-danger" type="submit" id="botao">Excluir</button>
     <?php } ?>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
