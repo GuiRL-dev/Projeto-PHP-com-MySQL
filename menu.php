@@ -1,4 +1,12 @@
 <!-- menu.php -->
+<?php
+// session_start();
+//   $id_cliente = $_SESSION['id_cliente'];
+//   $nome_cliente = $_SESSION['nome_cliente'];
+//   if($id_cliente == ""){
+//     header('location:index.php');
+//   }
+?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="img/logo_nossaloja.png" width="130px"></a>
