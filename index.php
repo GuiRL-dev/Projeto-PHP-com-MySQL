@@ -10,6 +10,7 @@ if (isset ($_SESSION['nome_cliente'])) {
 
 <head>
   <title>Nossa Loja</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
@@ -66,8 +67,17 @@ if (isset ($_SESSION['nome_cliente'])) {
       <?php
       if (isset ($_SESSION['nome_cliente'])) {
         echo ("<strong>Bem Vindo, $nome_cliente</strong>");
+        $sql = "select * from carrinho where id_cliente = '$id_cliente'";
+        $busca_carrinho = mysqli_query($conexao, $sql);
+        while ($array = mysqli_fetch_array($busca_carrinho)) {
+          $id_carrinho = $array['id_carrinho'];
+          $carrinho = true;
+        }
       }
       ?>
+    </div>
+    <div>
+      <a href="carrinho.php?id_carrinho=<?php echo $id_carrinho ?>"><i class="bi bi-cart"></i></a>
     </div>
     <div class="row align-items-start">
       <div class="col">
@@ -127,7 +137,8 @@ if (isset ($_SESSION['nome_cliente'])) {
                 <?php echo (number_format($preco, 2, ",", ".")) ?>
               </p>
               <div class="d-flex justify-content-center"> <!-- Centraliza o botão -->
-                <a href="_criar_carrinho.php?id_cliente=<?php echo($id_cliente)?>&id_produto=<?php echo ($id_produto) ?>" class="
+                <a href="_criar_carrinho.php?id_cliente=<?php echo ($id_cliente) ?>&id_produto=<?php echo ($id_produto) ?>"
+                  class="
                   mt-auto btn btn-primary">Adicione ao carrinho</a>
               </div>
             </div>
